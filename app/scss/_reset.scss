@@ -1,4 +1,6 @@
-
+html,body{
+    height: 100%;
+}
 html{
     box-sizing: border-box;
 }
@@ -45,6 +47,7 @@ input,button,textarea,select{
     font: inherit;
 }
 
+input:focus,
 input:active,
 input{
 	border:  0;

@@ -1,0 +1,115 @@
+.footer {
+    margin-bottom: 10px;
+    &__container{
+        padding-left: 7px;
+    }
+    &__top{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 16px;
+    }
+    &__text{
+        text-align: center;
+    }
+}
+.footer__top {
+    &-logo{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 25px;
+        img{
+            width: 31px;
+            height: 29px;
+        }
+    }
+    &-logo-text{
+        color: #173A56;
+        font-size: 28px;
+        line-height: 107%;
+        font-weight: 700;
+    }
+    &-social-items{
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        a{
+            position: relative;
+        }
+        a::after{
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: -9px;
+            left: -8px;
+            z-index: -1;
+            background-color: #EDFFFC;
+            border-radius: 50%;
+        }
+    }
+    &-wr{
+        display: flex;
+        gap: 100px;
+    }
+    &-text{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 150%;
+    }
+    &-list{
+        margin-top: 8px;
+    }
+    &-link{
+        font-size: 16px;
+        line-height: 218%;
+        color: $main-fontColor
+    }
+    &-info{
+        flex: 0 1 323px;
+    }
+    
+}
+
+.footer{
+    &__form-input{
+        width: 100%;
+        margin-top: 34px;
+        border: 1px solid #BCD0E5;
+        border-radius: 4px;
+        height: 48px;
+    }
+    &__form-button{
+        width: 130px;
+        height: 40px;
+        margin-top: 21px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .footer__top {
+        margin-bottom: 10px;
+        padding-left: 15px;
+        &-info{
+            flex: 0 1 275px;
+        }
+        &-wr{
+            gap: 25px;
+        }
+    }
+}
+@media (max-width: 767.98px) {
+    .footer__top{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    .footer__top-logoSocial{
+      margin: 0px auto;
+    }
+    .footer__top-wr{
+        gap: 0px;
+        justify-content: space-between;
+    }
+}

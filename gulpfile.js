@@ -71,7 +71,7 @@ function build() {
 
 function watching() {
     watch(['app/scss/**/*.scss'], styles)
-    watch(['app/js/**/*.jsn', '!app/js/main/min.js'], scripts)
+    watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts)
     watch(['app/index.html']).on('change', browserSync.reload)
 }
 

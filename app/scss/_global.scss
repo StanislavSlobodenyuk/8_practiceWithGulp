@@ -1,3 +1,7 @@
+body{
+    font-size: 16px;
+    font-family: $main-font;
+}
 .wrapper{
     display: flex;
     flex-direction: column;
@@ -6,7 +10,7 @@
 }
 
 .main{
-    flex: 1 0 auto;
+    flex: 1 1 auto;
 }
 
 .footer{
@@ -19,7 +23,7 @@
     padding: 0px 15px;
     margin: 0 auto;
 }
-@media (max-width: 1075.98px ){
+@media (max-width: 1076.98px ){
     [class*="__container"] {
         max-width: 970px;
    }
@@ -33,4 +37,15 @@
     [class*="__container"] {
         max-width: none;
    }
+}
+
+._button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 150%;
+    font-weight: 600;
+    background-color: #02897A;
+    border-radius: 4px;
+    color: #fff;
 }
