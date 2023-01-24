@@ -5,10 +5,7 @@
 @import 'global';
 @import 'header.scss';
 @import 'footer.scss';
-
-footer{
-    margin-top: 200px;
-}
+@import url("https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css");
 // ===== main-block ======
 .main-block {
     &__container{
@@ -350,6 +347,7 @@ footer{
 
 // ===== whatWeCan =====
 .whatWeCan {
+    position: relative;
     &__title{
         padding-top: 52px;
     }
@@ -367,12 +365,14 @@ footer{
         height: 53px;
         margin: 0 auto;
     }
-}
-.items-whatWeCan>*:nth-child(3){
-    padding-left: 33px;
-}
-.items-whatWeCan>*:nth-child(2){
-    padding-right: 33px;
+    &__decor{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -50px;
+        left: 40px;
+        z-index: -1;
+    }
 }
 .items-whatWeCan {
     display: grid;
@@ -387,5 +387,358 @@ footer{
     &__coment{
         font-weight: 500;
     }
+    &__user-icon img{
+        border-radius: 50%;
+    }
+}
+@media (min-width: 767.98px) {
+    .items-whatWeCan>*:nth-child(3){
+        padding-left: 33px;
+    }
+    .items-whatWeCan>*:nth-child(2){
+        padding-right: 33px;
+    }
+}
+@media (max-width: 1399.98px) {
+    .whatWeCan__decor{
+        top: -50px;
+        left: 0px;
+    }
+}
+@media (max-width: 991.98px) {
+    .whatWeCan{
+        &__text,
+        &__title{
+            text-align: center;
+            padding: 0 ;
+        }
+    }
+    .items-whatWeCan {
+        gap: 24px 80px ;
+        margin: 32px 0 48px;
+        &__item{
+            gap: 30px;
+        }
+    }
+}
+@media (max-width: 767.98px) {
+        .items-whatWeCan {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px 0px;
+            margin: 32px 70px 48px;
+            &__item{
+                gap: 40px;
+        }
+    }
+    .items-whatWeCan>*:nth-child(3),
+    .items-whatWeCan>*:nth-child(2){
+        margin: 0 0 0 auto;
+    }
+}
+@media (max-width: 510.98px) {
+    .items-whatWeCan {
+        margin: 32px 0px 48px;
+    }
 }
 // ===== whatWeCan =====
+
+
+// ===== contents-strategies =====
+.contents-strategies {
+    margin-top: 150px;
+    &__title{
+        line-height: 167%;
+        font-size: 34px;
+        font-weight: 700;
+    }
+    &__text{
+        margin-bottom: 32px;
+        font-weight: 500;
+        line-height: 167%;
+    }
+    &__swiper{
+        padding-bottom: 94px;
+    }
+}
+.contents-strategies__slide {
+    &-body{
+        border: 1px solid #bbbaba;
+        border-radius: 0px 0px 8px 8px;
+        border-top: 0;
+        padding: 24px 20px 40px 24px;
+        height: 95px;
+    }
+    &-title{
+        line-height: 175%;
+    }
+    &-title span {
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+    &-text{
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 167%;
+    }
+    ._green{
+        color: #02897a;
+    }
+}
+.contents-strategies .swiper-pagination-bullet{
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    background: #919090;
+}
+.contents-strategies .swiper-pagination-bullet-active{
+    background: #02897A;
+}   
+@media (max-width: 769.98px) {
+    .contents-strategies__swiper{
+        padding-bottom: 40px;
+    }
+}
+@media (max-width: 654.98px) {
+    .contents-strategies__swiper{
+        margin: 0 auto;
+        max-width: 348px
+    }
+    .contents-strategies__slide-body{
+        padding: 24px 16px 24px 20px;
+    }
+}
+// ===== contents-strategies =====
+
+
+// ===== price =====
+.price {
+    margin-top: 150px;
+    text-align: center;
+    &__title{
+        margin-bottom: 8px;
+    }
+    &__text{
+        margin-bottom: 50px;
+        font-weight: 500;
+        line-height: 150%;
+    }
+}
+.price__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 71px;
+    &-body{
+        height: 100%;
+        background-color: #FFFFFF;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        padding: 24px 0px 32px 0px;
+        text-align: center;
+    }
+    ._green-body{
+        background-color: #02897A;;
+        color: #fff;
+    }
+    &-title{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 167%;
+        margin-bottom: 8px;
+    }
+    &-text{
+        margin-bottom: 16px;
+    }
+    &-list{
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        line-height: 138%;
+        margin-bottom: 38px;
+    }
+    &-list >*:not(:last-child){
+        margin-bottom: 16px;
+    }
+    &-button{
+        width: 139px;
+        height: 44px;
+        margin: 0px auto;
+    }
+    ._green-body &-button{
+        background-color: #fff;
+        color: #02897a;
+    }
+}
+.price__items-body-cost {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    margin-bottom: 16px;
+    &__value{
+        color: #02897A;
+        font-weight: 700;
+        font-size: 76px;
+        line-height: 132%;
+    }
+    ._green-body &__value{
+        color: #fff;
+    }
+    &__text{
+        letter-spacing: 0.1px;
+        color: #AFAFAF;
+        line-height: 120%;
+        margin-top: 25px;
+    }
+    &__marK,
+    &__mark{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 25px;
+        font-size: 25px;
+    }
+    &__mark{
+     left: -13px;
+    }
+}
+@media (max-width: 991.98px) {
+    .price__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+@media (max-width: 767.98px) {
+  .price__items {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px 0px;
+    }
+}
+// ===== price =====
+
+
+// ===== reviews =====
+.reviews {
+    text-align: center;
+    margin-top: 150px;
+    &__title{
+        margin-bottom: 14px;
+    }
+    &__text{
+        padding: 0px 150px;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        margin-bottom: 50px;
+        line-height: 175%;
+    }
+}
+.reviews__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    &-body{
+        height: 100%;
+        background: #fff;
+        border: 1px solid #DEDEDE;
+        border-radius: 5px;
+        padding: 28px 24px 24px;
+        text-align: left;
+    }
+    &-body>:not(:last-child){
+        margin-bottom: 16px;
+    }
+    &-coment{
+        line-height: 175%;
+        letter-spacing: 0.1px;
+        color: #737373;
+        font-size: 15px;
+    }
+    &-user-information{
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+    &-icon img{
+        border-radius: 50%;
+    }
+    &-wrapper{
+        line-height: 150%;
+        font-weight: 500;
+    }
+    &-name{
+        color: #02897A;
+    }
+}
+@media (max-width: 1076.98px) {
+    .reviews__text{
+        padding: 0px 0px;
+    }
+}
+@media (max-width: 767.98px) {
+    .reviews__items {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px 0px;
+    }
+}
+// ===== reviews =====
+
+
+// ===== getThis =====
+.getThis {
+    margin: 150px 0px;
+    &__body{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin: 0px 69px;
+        background-color: #02897A;
+        padding: 15px 20px 15px 50px;
+        border-radius: 32px;
+    }
+    &__content{
+        max-width: 430px;
+    }
+    &__text{
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 151.4%;
+        color: #FFFFFF;
+        margin-bottom: 52px;
+    }
+    &__button{
+        width: 150px;
+        height: 50px;
+        background-color: #fff;
+        color: #02897A;
+        font-weight: 700;
+        font-size: 20px;
+    }
+}
+@media (max-width: 991.98px) {
+    .getThis {
+        margin: 150px 0px;
+        &__body{
+            margin: 0;
+            padding: 30px;
+        }
+        &__content{
+            max-width: 100%;
+        }
+        &__button{
+            width: 100%;
+        }
+        &__image{
+            display: none;
+        }
+    }
+}
+@media (max-width: 424.98px) {
+    .getThis__text{
+        font-size: 28px;
+    }
+}
+// ===== getThis =====
