@@ -4,6 +4,13 @@ body{
     color: $main-fontColor;
     background-color: #fff;
 }
+body._green {
+    color: #fff;
+    background-color: $green-color;
+}
+body._green a{
+    color: #fff;
+}
 .wrapper{
     display: flex;
     flex-direction: column;
@@ -41,6 +48,10 @@ body{
    }
 }
 
+body._green ._button{
+    background-color: #fff;
+    color: #02897A;
+}
 ._button{
     display: flex;
     align-items: center;

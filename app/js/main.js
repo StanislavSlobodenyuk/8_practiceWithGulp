@@ -64,3 +64,13 @@ let contentsStrategies_Slider = new Swiper('.contents-strategies__swiper',{
     }
 });
 
+
+const changeTheme = document.querySelector(".menu__button-ChangeTheme");
+
+console.log(changeTheme);
+if (changeTheme.length != 0) {
+    changeTheme.addEventListener("click", function (elem) {
+        document.body.classList.toggle('_green');
+        console.log("All work!");                                                                               
+    })
+} 

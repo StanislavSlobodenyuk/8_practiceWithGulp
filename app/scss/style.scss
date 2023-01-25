@@ -111,6 +111,10 @@
         z-index: -1;
     }
 }
+body._green .advantages__decor, 
+body._green .whatWeCan__decor{
+    display: none;
+}
 .advantages__items{
     &-body{
         height: 100%;
@@ -484,6 +488,9 @@
         color: #02897a;
     }
 }
+body._green ._green{
+    color: #000;
+}
 .contents-strategies .swiper-pagination-bullet{
     font-size: 16px;
     width: 16px;
@@ -535,9 +542,13 @@
         padding: 24px 0px 32px 0px;
         text-align: center;
     }
-    ._green-body{
-        background-color: #02897A;;
+    ._green-body {
+        background-color: $green-color;
         color: #fff;
+    }
+    body._green &-body{
+        background-color: #fff;
+        color: $green-color;
     }
     &-title{
         font-weight: 700;
@@ -562,9 +573,17 @@
         height: 44px;
         margin: 0px auto;
     }
+    body._green &-button{
+        background-color: $green-color;
+        color: #fff;
+    }
     ._green-body &-button{
         background-color: #fff;
-        color: #02897a;
+        color: $green-color;
+    }
+    body._green ._green-body &-button{
+        background-color: $green-color;
+        color: #fff;
     }
 }
 .price__items-body-cost {
@@ -582,6 +601,9 @@
     }
     ._green-body &__value{
         color: #fff;
+    }
+    body._green ._green-body &__value{
+        color: $green-color;
     }
     &__text{
         letter-spacing: 0.1px;
@@ -670,6 +692,9 @@
     &-name{
         color: #02897A;
     }
+    body._green &-work{
+        color: $main-fontColor;
+    }
 }
 @media (max-width: 1076.98px) {
     .reviews__text{
@@ -695,9 +720,12 @@
         justify-content: space-between;
 
         margin: 0px 69px;
-        background-color: #02897A;
+        background-color: $green-color;
         padding: 15px 20px 15px 50px;
         border-radius: 32px;
+    }
+    body._green &__body{
+        background-color: #fff;
     }
     &__content{
         max-width: 430px;
@@ -708,6 +736,9 @@
         line-height: 151.4%;
         color: #FFFFFF;
         margin-bottom: 52px;
+    }
+    body._green &__text{
+        color: $green-color;
     }
     &__button{
         width: 150px;
